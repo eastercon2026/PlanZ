@@ -126,6 +126,11 @@ EOD;
                 $url = str_replace("{loc}", $row["loc"], $url);
                 $programRow["links"]["replay"] = $url;
             }
+            if (!empty($row['signuplink'])) {
+                $url = str_replace("{id}", $row["id"], $row["signuplink"]);
+                $url = str_replace("{loc}", $row["loc"], $url);
+                $programRow["links"]["signup"] = $url;
+            }
             $program[] = $programRow;
     }
 
