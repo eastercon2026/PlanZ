@@ -61,7 +61,8 @@ SELECT
     GROUP_CONCAT(TA.tagname SEPARATOR ',') AS taglist,
     S.meetinglink,
     S.streaminglink,
-    S.replaylink
+    S.replaylink,
+    S.signuplink
 FROM
               Schedule SCH
          JOIN Sessions S USING (sessionid)
